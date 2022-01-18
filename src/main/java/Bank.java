@@ -1,5 +1,5 @@
 public class Bank {
-    Money reduce(Expression sum, String usd) {
-        return Money.dollar(10);
+    Money reduce(Expression source, String to) {
+        return source.reduce(to);
     }
 }
