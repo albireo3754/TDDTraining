@@ -3,7 +3,7 @@ public class Dollar extends Money {
         super(amount, currency);
     }
 
-    Money times(int multiplier) {
+    public Money times(int multiplier) {
         return new Dollar(amount * multiplier, currency);
     }
 }
