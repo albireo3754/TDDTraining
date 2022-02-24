@@ -1,5 +1,6 @@
 from TestCase import TestCase
 from WasRun import WasRun
+from TestResult import TestResult
 
 class TestCaseTest(TestCase):
     def setUp(self):
@@ -10,5 +11,9 @@ class TestCaseTest(TestCase):
         test.run()
         assert("setUp testMethod tearDown" == test.log)
 
-TestCaseTest("testTemplateMethod").run()
+    def testResult(self):
+        test = WasRun("testMethod")
+        result = test.run()
+        assert("1 run, 1 failed" == result.summary())
+TestCaseTest("testResult").run()
 
