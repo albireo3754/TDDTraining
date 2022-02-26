@@ -4,13 +4,20 @@ class TestCase:
 
     def run(self, result):
         result.testStarted()
-        self.setUp()
+        flag = False
         try:
-            method = getattr(self, self.name)
-            method()
+            self.setUp()
+            flag = True
         except:
+            flag = False
             result.testFailed()
-        self.tearDown()
+        if flag:
+            try:
+                method = getattr(self, self.name)
+                method()
+            except:
+                result.testFailed()
+            self.tearDown()
 
     def setUp(self):
         pass
@@ -24,8 +31,9 @@ class TestCase:
 class WasRun(TestCase):
     def __init__(self, name):
         TestCase.__init__(self, name)
-
+        self.log = ""
     def setUp(self):
+        print("setUp")
         self.log = "setUp "
     
     def testMethod(self):
@@ -63,6 +71,14 @@ class TestSuite(TestCase):
         for test in self.tests:
             test.run(result)
 
+class TestSetUpFail(WasRun):
+    def __init__(self, name):
+        WasRun.__init__(self, name)
+    
+    def setUp(self):
+        super().setUp()
+        raise Exception
+
 class TestCaseTest(TestCase):
     def setUp(self):
         self.result = TestResult()
@@ -99,6 +115,12 @@ class TestCaseTest(TestCase):
         self.test.run(self.result)
         assert(self.test.log == "setUp testBrokenMethod tearDown")
 
+    def testIfSetUpRaiseError(self):
+        test = TestSetUpFail("testMethod")
+        test.run(self.result)
+        assert(test.log == "setUp ")
+        assert("1 run, 1 failed" == self.result.summary())
+
 suite = TestSuite()
 suite.add(TestCaseTest("testTemplateMethod"))
 suite.add(TestCaseTest("testResult"))
@@ -106,6 +128,7 @@ suite.add(TestCaseTest("testFailedResult"))
 suite.add(TestCaseTest("testFailedResultFormatting"))
 suite.add(TestCaseTest("testSuite"))
 suite.add(TestCaseTest("testFailedButTearDownExcute"))
+suite.add(TestCaseTest("testIfSetUpRaiseError"))
 result = TestResult()
 suite.run(result)
 print(result.summary())
