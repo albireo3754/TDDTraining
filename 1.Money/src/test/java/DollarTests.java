@@ -12,7 +12,7 @@ public class DollarTests {
 
     @Test
     public void testFrancMultiplication() {
-        Franc franc = new Franc(5);
+        Franc franc = new Franc(5, null);
         assertEquals(Money.franc(10), franc.times(2));
         assertEquals(Money.franc(15), franc.times(3));
     }
@@ -24,5 +24,11 @@ public class DollarTests {
         assertEquals(Money.franc(5), Money.franc(5));
 //        assertTrue(new Franc(5).equals(new Franc(6)));
         assertNotEquals(Money.franc(5), Money.franc(6));
+    }
+
+    @Test
+    public void testCurrency() {
+        assertEquals("USD", Money.dollar(1).currency());
+        assertEquals("CHF", Money.franc(1).currency());
     }
 }
