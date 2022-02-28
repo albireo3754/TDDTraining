@@ -5,14 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class DollarTests {
     @Test
     public void testMultiplication() {
-        Dollar five = Money.dollar(5);
+        Money five = Money.dollar(5);
         assertEquals(Money.dollar(10), five.times(2));
         assertEquals(Money.dollar(15), five.times(3));
     }
 
     @Test
     public void testFrancMultiplication() {
-        Franc franc = new Franc(5, null);
+        Money franc = new Money(5, "CHF");
         assertEquals(Money.franc(10), franc.times(2));
         assertEquals(Money.franc(15), franc.times(3));
     }
@@ -24,6 +24,12 @@ public class DollarTests {
         assertEquals(Money.franc(5), Money.franc(5));
 //        assertTrue(new Franc(5).equals(new Franc(6)));
         assertNotEquals(Money.franc(5), Money.franc(6));
+        assertNotEquals(Money.dollar(5), Money.franc(5));
+    }
+
+    @Test
+    public void testDifferentClassEquality() {
+        assertTrue(new Money(10, "CHF").equals(new Money(10, "CHF")));
     }
 
     @Test

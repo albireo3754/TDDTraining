@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DollarTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-02-28T13:53:40" hostname="yunsangjin-ui-MacBookAir.local" time="0.076">
+<testsuite name="DollarTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-02-28T14:13:12" hostname="yunsangjin-ui-MacBookAir.local" time="0.081">
   <properties/>
-  <testcase name="testMultiplication()" classname="DollarTests" time="0.055"/>
-  <testcase name="testFrancMultiplication()" classname="DollarTests" time="0.004"/>
-  <testcase name="testCurrency()" classname="DollarTests" time="0.001"/>
+  <testcase name="testMultiplication()" classname="DollarTests" time="0.048"/>
+  <testcase name="testDifferentClassEquality()" classname="DollarTests" time="0.003"/>
+  <testcase name="testFrancMultiplication()" classname="DollarTests" time="0.001"/>
+  <testcase name="testCurrency()" classname="DollarTests" time="0.005"/>
   <testcase name="testEquality()" classname="DollarTests" time="0.008"/>
-  <system-out><![CDATA[10
-15
-10
-15
-5
-6
-5
-6
-]]></system-out>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
