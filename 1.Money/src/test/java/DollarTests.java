@@ -70,4 +70,23 @@ public class DollarTests {
         Money result = bank.reduce(Money.dollar(1), "USD");
         assertEquals(Money.dollar(1), result);
     }
+
+    @Test
+    public void testIdentityRate() {
+        assertEquals(1, new Bank().rate("USD", "USD"));
+    }
+
+    @Test
+    public void testReduceMoneyDifferentCurrency() {
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        Money result = bank.reduce(Money.franc(2), "USD");
+        assertEquals(Money.dollar(1), result);
+    }
+
+    // "abc" 배열을 해쉬로 사용할 수 없음을 보여주는 예제
+//    @Test
+//    public void testArrayEquals() {
+//        assertEquals(new Object[] {"abc"}, new Object[] {"abc"});
+//    }
 }

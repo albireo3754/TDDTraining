@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DollarTests" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-03-01T06:06:50" hostname="yunsangjin-ui-MacBookAir.local" time="0.061">
+<testsuite name="DollarTests" tests="11" skipped="0" failures="0" errors="0" timestamp="2022-03-01T06:29:13" hostname="yunsangjin-ui-MacBookAir.local" time="0.089">
   <properties/>
-  <testcase name="testReduceSum()" classname="DollarTests" time="0.033"/>
-  <testcase name="testSimpleAddition()" classname="DollarTests" time="0.003"/>
-  <testcase name="testMultiplication()" classname="DollarTests" time="0.001"/>
-  <testcase name="testDifferentClassEquality()" classname="DollarTests" time="0.002"/>
-  <testcase name="testReduceMoney()" classname="DollarTests" time="0.002"/>
-  <testcase name="testFrancMultiplication()" classname="DollarTests" time="0.0"/>
-  <testcase name="testCurrency()" classname="DollarTests" time="0.002"/>
-  <testcase name="testEquality()" classname="DollarTests" time="0.004"/>
-  <testcase name="testPlusReturnsSum()" classname="DollarTests" time="0.0"/>
+  <testcase name="testReduceSum()" classname="DollarTests" time="0.041"/>
+  <testcase name="testSimpleAddition()" classname="DollarTests" time="0.002"/>
+  <testcase name="testMultiplication()" classname="DollarTests" time="0.004"/>
+  <testcase name="testDifferentClassEquality()" classname="DollarTests" time="0.004"/>
+  <testcase name="testReduceMoney()" classname="DollarTests" time="0.0"/>
+  <testcase name="testIdentityRate()" classname="DollarTests" time="0.002"/>
+  <testcase name="testFrancMultiplication()" classname="DollarTests" time="0.001"/>
+  <testcase name="testCurrency()" classname="DollarTests" time="0.001"/>
+  <testcase name="testEquality()" classname="DollarTests" time="0.005"/>
+  <testcase name="testPlusReturnsSum()" classname="DollarTests" time="0.001"/>
+  <testcase name="testReduceMoneyDifferentCurrency()" classname="DollarTests" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
