@@ -14,7 +14,11 @@ class Sum implements Expression {
     }
 
     // TODO: stub을 나중에 교체해야함
-    public Expression plus(Expression tenFrancs) {
-        return null;
+    public Expression plus(Expression addend) {
+        return new Sum(this, addend);
+    }
+
+    public Expression times(int multiplier) {
+        return new Sum(augend.times(multiplier), addend.times(multiplier));
     }
 }

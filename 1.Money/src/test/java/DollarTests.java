@@ -93,6 +93,37 @@ public class DollarTests {
         Money result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
         assertEquals(Money.dollar(10), result);
     }
+
+    @Test
+    public void testSumPlusMoney() {
+        Expression fiveBucks = Money.dollar(5);
+        Expression tenFrancs = Money.franc(10);
+        Expression sevenBucks = Money.dollar(7);
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        // Sum을 bank.reduce를 이용해서 만들 수 도 있었겠지만 좀 더 직관적으로 sum이란 것을 나타내기 위해서 직접 선언하였음
+        Expression sum = new Sum(fiveBucks, tenFrancs).plus(sevenBucks);
+        Money result = bank.reduce(sum, "USD");
+        assertEquals(Money.dollar(17), result);
+    }
+
+//    // 실패할 테스트 작성 후 제대로 되지않자 버린다.
+//    @Test
+//    public void testPlusSameCurrencyReturnsMoney() {
+//        Expression sum = Money.dollar(1).plus(Money.dollar(1));
+//        assertTrue(sum instanceof Money);
+//    }
+//
+//    @Test
+//    public void testSumTimes() {
+//        Expression fiveBucks = Money.dollar(5);
+//        Expression tenFrancs = Money.franc(10);
+//        Bank bank = new Bank();
+//        bank.addRate("CHF", "USD", 2);
+//        Expression times = new Sum(fiveBucks, tenFrancs).times(2);
+//        Money result = bank.reduce(times, "USD");
+//        assertEquals(Money.dollar(20), result);
+//    }
     // "abc" 배열을 해쉬로 사용할 수 없음을 보여주는 예제
 //    @Test
 //    public void testArrayEquals() {
