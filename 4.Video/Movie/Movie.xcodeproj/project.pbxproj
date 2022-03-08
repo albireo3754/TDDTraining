@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DD8AEB4227D7A34F00ADBB93 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AEB4127D7A34F00ADBB93 /* main.swift */; };
+		DD8AEB5127D7A48400ADBB93 /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AEB5027D7A48400ADBB93 /* MovieTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +28,19 @@
 		DD8AEB4127D7A34F00ADBB93 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DD8AEB4827D7A36C00ADBB93 /* plays.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = plays.json; sourceTree = "<group>"; };
 		DD8AEB4927D7A3D600ADBB93 /* invoices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = invoices.json; sourceTree = "<group>"; };
+		DD8AEB4E27D7A48400ADBB93 /* MovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD8AEB5027D7A48400ADBB93 /* MovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DD8AEB3B27D7A34F00ADBB93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD8AEB4B27D7A48400ADBB93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +56,7 @@
 				DD8AEB4927D7A3D600ADBB93 /* invoices.json */,
 				DD8AEB4827D7A36C00ADBB93 /* plays.json */,
 				DD8AEB4027D7A34F00ADBB93 /* Movie */,
+				DD8AEB4F27D7A48400ADBB93 /* MovieTests */,
 				DD8AEB3F27D7A34F00ADBB93 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				DD8AEB3E27D7A34F00ADBB93 /* Movie */,
+				DD8AEB4E27D7A48400ADBB93 /* MovieTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +76,14 @@
 				DD8AEB4127D7A34F00ADBB93 /* main.swift */,
 			);
 			path = Movie;
+			sourceTree = "<group>";
+		};
+		DD8AEB4F27D7A48400ADBB93 /* MovieTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD8AEB5027D7A48400ADBB93 /* MovieTests.swift */,
+			);
+			path = MovieTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +106,23 @@
 			productReference = DD8AEB3E27D7A34F00ADBB93 /* Movie */;
 			productType = "com.apple.product-type.tool";
 		};
+		DD8AEB4D27D7A48400ADBB93 /* MovieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD8AEB5227D7A48400ADBB93 /* Build configuration list for PBXNativeTarget "MovieTests" */;
+			buildPhases = (
+				DD8AEB4A27D7A48400ADBB93 /* Sources */,
+				DD8AEB4B27D7A48400ADBB93 /* Frameworks */,
+				DD8AEB4C27D7A48400ADBB93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MovieTests;
+			productName = MovieTests;
+			productReference = DD8AEB4E27D7A48400ADBB93 /* MovieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -97,6 +134,9 @@
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					DD8AEB3D27D7A34F00ADBB93 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					DD8AEB4D27D7A48400ADBB93 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
@@ -115,9 +155,20 @@
 			projectRoot = "";
 			targets = (
 				DD8AEB3D27D7A34F00ADBB93 /* Movie */,
+				DD8AEB4D27D7A48400ADBB93 /* MovieTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD8AEB4C27D7A48400ADBB93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DD8AEB3A27D7A34F00ADBB93 /* Sources */ = {
@@ -125,6 +176,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD8AEB4227D7A34F00ADBB93 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD8AEB4A27D7A48400ADBB93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD8AEB5127D7A48400ADBB93 /* MovieTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +327,48 @@
 			};
 			name = Release;
 		};
+		DD8AEB5327D7A48400ADBB93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6785P7H4GT;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Albireo3754.MovieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DD8AEB5427D7A48400ADBB93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6785P7H4GT;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Albireo3754.MovieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -285,6 +386,15 @@
 			buildConfigurations = (
 				DD8AEB4627D7A34F00ADBB93 /* Debug */,
 				DD8AEB4727D7A34F00ADBB93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD8AEB5227D7A48400ADBB93 /* Build configuration list for PBXNativeTarget "MovieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD8AEB5327D7A48400ADBB93 /* Debug */,
+				DD8AEB5427D7A48400ADBB93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
