@@ -6,19 +6,22 @@
 //
 
 import XCTest
+import Movie
+
 
 class MovieTests: XCTestCase {
     
     func testStatement() throws {
         // arrange
         let invoice = Invoice()
-        let plays = Plays()
+        let invoice = Invoice(customer: <#String#>, performances: <#[Peformance]#>)
+        let plays = Play
         
         // act
-        result = statement(invoice: invoice, plays: plays)
+        let result = statement(invoice: invoice, plays: plays)
         
         // assert
-        let expectedResult = Result()
+        let expectedResult = ""
         XCTAssertEqual(result, expectedResult)
     }
 }
