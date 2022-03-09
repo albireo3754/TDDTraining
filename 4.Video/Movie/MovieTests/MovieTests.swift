@@ -2,26 +2,31 @@
 //  MovieTests.swift
 //  MovieTests
 //
-//  Created by 윤상진 on 2022/03/08.
+//  Created by 윤상진 on 2022/03/09.
 //
 
 import XCTest
-import Movie
-
 
 class MovieTests: XCTestCase {
-    
-    func testStatement() throws {
-        // arrange
-        let invoice = Invoice()
-        let invoice = Invoice(customer: <#String#>, performances: <#[Peformance]#>)
-        let plays = Play
-        
-        // act
-        let result = statement(invoice: invoice, plays: plays)
-        
-        // assert
-        let expectedResult = ""
-        XCTAssertEqual(result, expectedResult)
+
+    override func setUpWithError() throws {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
+
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+
+    func testExample() throws {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+
+    func testPerformanceExample() throws {
+        // This is an example of a performance test case.
+        measure {
+            // Put the code you want to measure the time of here.
+        }
+    }
+
 }
