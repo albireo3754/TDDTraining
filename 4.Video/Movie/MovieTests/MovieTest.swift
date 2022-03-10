@@ -23,7 +23,9 @@ class TestMovie: XCTestCase {
         let invoices = Invoice(customer: "BigCo", performances: performances)
         
         // act
-        let result = statement(invoice: invoices, plays: plays)
+        var movie = Movie()
+        movie.plays = plays
+        let result = movie.statement(invoice: invoices)
         
         // assert
         let expectedResult = "청구 내역 (고객명: BigCo)\nHamlet: $650.00 (55석)\nAs You Like it: $580.00 (35석)\nOthello: $500.00 (40석)\n총액: $1,730.00\n적립 포인트: 47점\n"
