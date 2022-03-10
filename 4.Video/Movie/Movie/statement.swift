@@ -44,6 +44,10 @@ func amountFor(performance: Peformance, play: Play) -> Int? {
     return result
 }
 
+func playFor(_ plays: [String : Play], _ performance: Peformance) -> Play {
+    return plays[performance.playID]!
+}
+
 func statement(invoice: Invoice, plays: [String: Play]) -> String? {
     var totalAmount = 0;
     var volumeCredits = 0;
@@ -57,13 +61,13 @@ func statement(invoice: Invoice, plays: [String: Play]) -> String? {
         return formatter.string(from: NSNumber(value: $0))!
     }
     for performance in invoice.performances {
-        let play = plays[performance.playID]!
-        let thisAmount = amountFor(performance: performance, play: play)!
+        // 변수 인라인하기
+        let thisAmount = amountFor(performance: performance, play: playFor(plays, performance))!
         volumeCredits += max(performance.audience - 30, 0)
-        if "comedy" == play.type {
+        if "comedy" == playFor(plays, performance).type {
             volumeCredits += (performance.audience / 5)
         }
-        result += "\(play.name): \(format(Double(thisAmount/100))) (\(performance.audience)석)\n"
+        result += "\(playFor(plays, performance).name): \(format(Double(thisAmount/100))) (\(performance.audience)석)\n"
         totalAmount += thisAmount
     }
     result += "총액: \(format(Double(totalAmount/100)))\n"
