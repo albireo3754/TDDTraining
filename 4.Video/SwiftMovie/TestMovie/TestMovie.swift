@@ -6,27 +6,21 @@
 //
 
 import XCTest
-@testable import SwiftMovie
+class Test {
+    var hi2 = 3
+    var hi: Int {
+        var num = hi2 + 1
+        return num
+    }
+}
 
 class TestMovie: XCTestCase {
-
-    func test_Statement() throws {
-        // arrange
-        
-        let hamlet = Play(name: "Hamlet", type: "tragedy")
-        let aslike = Play(name: "As You Like it", type: "comedy")
-        let othello = Play(name: "Othello", type: "tragedy")
-        let plays = ["hamlet": hamlet, "as-like": aslike, "othello": othello]
-        let performances = [Peformance(playID: "hamlet", audience: 55),
-                            Peformance(playID: "as-like", audience: 35),
-                            Peformance(playID: "othello", audience: 40)]
-        let invoices = Invoice(customer: "BigCo", performances: performances)
-        
-        // act
-        let result = statement(invoice: invoices, plays: plays)
-        
-        // assert
-        let expectedResult = ""
-        XCTAssertEqual(result, expectedResult)
+    
+    func test_Test() throws {
+        let test = Test()
+        XCTAssertEqual(test.hi, 4)
+        test.hi2 = 7
+        XCTAssertEqual(test.hi, 8)
     }
+
 }

@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
+    fileprivate func extractedFunc() -> some View {
+        return Text("Hello, world!")
             .padding()
+    }
+    
+    var body: some View {
+        extractedFunc()
     }
 }
 

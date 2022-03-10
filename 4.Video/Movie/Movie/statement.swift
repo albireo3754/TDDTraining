@@ -22,6 +22,28 @@ struct Invoice {
     let performances: [Peformance]
 }
 
+// 메서드 추출하기 -> 진짜 단순하게 메서들를 추출함
+func amountFor(performance: Peformance, play: Play) -> Int? {
+    var result = 0
+    
+    switch play.type {
+    case "tragedy":
+        result = 40000
+        if (performance.audience > 30) {
+            result += 1000 * (performance.audience - 30)
+        }
+    case "comedy":
+        result = 30000
+        if (performance.audience > 20) {
+            result += 10000 + 500 * (performance.audience - 20)
+        }
+        result += 300 * performance.audience
+    default:
+        return nil
+    }
+    return result
+}
+
 func statement(invoice: Invoice, plays: [String: Play]) -> String? {
     var totalAmount = 0;
     var volumeCredits = 0;
@@ -36,23 +58,7 @@ func statement(invoice: Invoice, plays: [String: Play]) -> String? {
     }
     for performance in invoice.performances {
         let play = plays[performance.playID]!
-        var thisAmount = 0
-        
-        switch play.type {
-        case "tragedy":
-            thisAmount = 40000
-            if (performance.audience > 30) {
-                thisAmount += 1000 * (performance.audience - 30)
-            }
-        case "comedy":
-            thisAmount = 30000
-            if (performance.audience > 20) {
-                thisAmount += 10000 + 500 * (performance.audience - 20)
-            }
-            thisAmount += 300 * performance.audience
-        default:
-            return nil
-        }
+        let thisAmount = amountFor(performance: performance, play: play)!
         volumeCredits += max(performance.audience - 30, 0)
         if "comedy" == play.type {
             volumeCredits += (performance.audience / 5)
