@@ -69,9 +69,9 @@ class Movie {
     }
     
     func statement(invoice: Invoice) -> String? {
-        var totalAmount = 0;
-        var volumeCredits = 0;
+        var totalAmount = 0
         var result = "청구 내역 (고객명: \(invoice.customer))\n"
+        var volumeCredits = 0
         for performance in invoice.performances {
             volumeCredits += self.volumeCredits(performance)
         }
