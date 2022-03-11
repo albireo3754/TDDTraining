@@ -74,6 +74,8 @@ class Movie {
         var result = "청구 내역 (고객명: \(invoice.customer))\n"
         for performance in invoice.performances {
             volumeCredits += self.volumeCredits(performance)
+        }
+        for performance in invoice.performances {
             result += "\(playFor(performance).name): \(usd(Double(amountFor(performance: performance)!))) (\(performance.audience)석)\n"
             totalAmount += amountFor(performance: performance)!
         }
