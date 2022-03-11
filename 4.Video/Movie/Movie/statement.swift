@@ -76,7 +76,7 @@ class Movie {
         return volumeCredits
     }
     
-    func appleSauce(_ invoice: Invoice) -> Int {
+    func totalAmount(_ invoice: Invoice) -> Int {
         var totalAmount = 0
         for performance in invoice.performances {
             totalAmount += amountFor(performance: performance)!
@@ -90,7 +90,7 @@ class Movie {
         for performance in invoice.performances {
             result += "\(playFor(performance).name): \(usd(Double(amountFor(performance: performance)!))) (\(performance.audience)석)\n"
         }
-        result += "총액: \(usd(Double(appleSauce(invoice))))\n"
+        result += "총액: \(usd(Double(totalAmount(invoice))))\n"
         result += "적립 포인트: \(totalVolumeCredits(invoice))점\n"
         return result
     }
