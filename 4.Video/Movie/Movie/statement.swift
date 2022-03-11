@@ -26,10 +26,10 @@ class Movie {
     // 메서드 추출하기 -> 진짜 단순하게 메서들를 추출함
     var plays: [String: Play] = [:]
     
-    func amountFor(performance: Peformance, play: Play) -> Int? {
+    func amountFor(performance: Peformance) -> Int? {
         var result = 0
         
-        switch play.type {
+        switch playFor(performance).type {
         case "tragedy":
             result = 40000
             if (performance.audience > 30) {
@@ -51,29 +51,33 @@ class Movie {
         return plays[performance.playID]!
     }
 
+    func volumeCredits(_ performance: Peformance) -> Int {
+        var volumeCredits = max(performance.audience - 30, 0)
+        if "comedy" == playFor(performance).type {
+            volumeCredits += (performance.audience / 5)
+        }
+        return volumeCredits
+    }
+    
+    func usd(_ number: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = .init(identifier: "en-US")
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        return formatter.string(from: NSNumber(value: number / 100.0))!
+    }
+    
     func statement(invoice: Invoice) -> String? {
         var totalAmount = 0;
         var volumeCredits = 0;
         var result = "청구 내역 (고객명: \(invoice.customer))\n"
-        let format: (Double) -> String = {
-            let formatter = NumberFormatter()
-            formatter.numberStyle = .currency
-            formatter.locale = .init(identifier: "en-US")
-            formatter.maximumFractionDigits = 2
-            formatter.minimumFractionDigits = 2
-            return formatter.string(from: NSNumber(value: $0))!
-        }
         for performance in invoice.performances {
-            // 변수 인라인하기
-            let thisAmount = amountFor(performance: performance, play: playFor(performance))!
-            volumeCredits += max(performance.audience - 30, 0)
-            if "comedy" == playFor(performance).type {
-                volumeCredits += (performance.audience / 5)
-            }
-            result += "\(playFor(performance).name): \(format(Double(thisAmount/100))) (\(performance.audience)석)\n"
-            totalAmount += thisAmount
+            volumeCredits += self.volumeCredits(performance)
+            result += "\(playFor(performance).name): \(usd(Double(amountFor(performance: performance)!))) (\(performance.audience)석)\n"
+            totalAmount += amountFor(performance: performance)!
         }
-        result += "총액: \(format(Double(totalAmount/100)))\n"
+        result += "총액: \(usd(Double(totalAmount)))\n"
         result += "적립 포인트: \(volumeCredits)점\n"
         return result
     }
