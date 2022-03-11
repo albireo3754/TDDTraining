@@ -68,13 +68,18 @@ class Movie {
         return formatter.string(from: NSNumber(value: number / 100.0))!
     }
     
-    func statement(invoice: Invoice) -> String? {
-        var totalAmount = 0
-        var result = "청구 내역 (고객명: \(invoice.customer))\n"
+    func totalVolumeCredits(_ invoice: Invoice) -> Int {
         var volumeCredits = 0
         for performance in invoice.performances {
             volumeCredits += self.volumeCredits(performance)
         }
+        return volumeCredits
+    }
+    
+    func statement(invoice: Invoice) -> String? {
+        var totalAmount = 0
+        var result = "청구 내역 (고객명: \(invoice.customer))\n"
+        let volumeCredits = totalVolumeCredits(invoice)
         for performance in invoice.performances {
             result += "\(playFor(performance).name): \(usd(Double(amountFor(performance: performance)!))) (\(performance.audience)석)\n"
             totalAmount += amountFor(performance: performance)!
