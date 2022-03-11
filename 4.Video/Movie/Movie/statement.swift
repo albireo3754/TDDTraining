@@ -79,13 +79,12 @@ class Movie {
     func statement(invoice: Invoice) -> String? {
         var totalAmount = 0
         var result = "청구 내역 (고객명: \(invoice.customer))\n"
-        let volumeCredits = totalVolumeCredits(invoice)
         for performance in invoice.performances {
             result += "\(playFor(performance).name): \(usd(Double(amountFor(performance: performance)!))) (\(performance.audience)석)\n"
             totalAmount += amountFor(performance: performance)!
         }
         result += "총액: \(usd(Double(totalAmount)))\n"
-        result += "적립 포인트: \(volumeCredits)점\n"
+        result += "적립 포인트: \(totalVolumeCredits(invoice))점\n"
         return result
     }
 }
