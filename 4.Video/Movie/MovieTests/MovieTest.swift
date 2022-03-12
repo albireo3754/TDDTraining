@@ -17,9 +17,9 @@ class TestMovie: XCTestCase {
         let aslike = Play(name: "As You Like it", type: "comedy")
         let othello = Play(name: "Othello", type: "tragedy")
         let plays = ["hamlet": hamlet, "as-like": aslike, "othello": othello]
-        let performances = [Peformance(playID: "hamlet", audience: 55),
-                            Peformance(playID: "as-like", audience: 35),
-                            Peformance(playID: "othello", audience: 40)]
+        let performances = [Performance(playID: "hamlet", audience: 55),
+                            Performance(playID: "as-like", audience: 35),
+                            Performance(playID: "othello", audience: 40)]
         let invoices = Invoice(customer: "BigCo", performances: performances)
         
         // act
