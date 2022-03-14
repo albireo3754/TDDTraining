@@ -32,32 +32,51 @@ class PerformanceCalculator {
     }
     
     var amount: Int {
-        var result = 0
-        
+        return 0
+    }
+    
+    var volumeCredit: Int {
+        return max(performance.audience - 30, 0)
+    }
+    
+    static func createPerformanceCalculator(performance: Performance, play: Play) -> PerformanceCalculator {
         switch play.type {
         case "tragedy":
-            result = 40000
-            if (performance.audience > 30) {
-                result += 1000 * (performance.audience - 30)
-            }
+            return TragedyCalculator(performance: performance, play: play)
         case "comedy":
-            result = 30000
-            if (performance.audience > 20) {
-                result += 10000 + 500 * (performance.audience - 20)
-            }
-            result += 300 * performance.audience
+            return ComedyCalculator(performance: performance, play: play)
         default:
             break
+        }
+        return PerformanceCalculator(performance: performance, play: play)
+    }
+}
+
+class TragedyCalculator: PerformanceCalculator {
+    
+    override var amount: Int {
+        var result = 40000
+        if (performance.audience > 30) {
+            result += 1000 * (performance.audience - 30)
         }
         return result
     }
     
-    var volumeCredit: Int {
-        var volumeCredit = max(performance.audience - 30, 0)
-        if "comedy" == play.type {
-            volumeCredit += (performance.audience / 5)
+}
+
+class ComedyCalculator: PerformanceCalculator {
+    
+    override var amount: Int {
+        var result = 30000
+        if (performance.audience > 20) {
+            result += 10000 + 500 * (performance.audience - 20)
         }
-        return volumeCredit
+        result += 300 * performance.audience
+        return result
+    }
+    
+    override var volumeCredit: Int {
+        return super.volumeCredit + (performance.audience / 5)
     }
 }
 
@@ -99,7 +118,7 @@ class Movie {
     }
     
     func enrichPerformance(_ performance: Performance) -> StatementData.Performance {
-        let calculator = PerformanceCalculator(performance: performance, play: playFor(performance))
+        let calculator = PerformanceCalculator.createPerformanceCalculator(performance: performance, play: playFor(performance))
         let play = calculator.play
         let amount = calculator.amount
         let audience = performance.audience
