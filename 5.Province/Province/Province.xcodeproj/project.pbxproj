@@ -15,6 +15,16 @@
 		DD33B7A627E23190000B0261 /* Province.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD33B7A527E23190000B0261 /* Province.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DD1F73E227E235AC00326FE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD33B78127E23122000B0261 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD33B78827E23122000B0261;
+			remoteInfo = Province;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		DD33B78927E23122000B0261 /* Province.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Province.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD33B78C27E23122000B0261 /* ProvinceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceApp.swift; sourceTree = "<group>"; };
@@ -121,6 +131,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DD1F73E327E235AC00326FE3 /* PBXTargetDependency */,
 			);
 			name = ProvinceTest;
 			productName = ProvinceTest;
@@ -142,6 +153,7 @@
 					};
 					DD33B79D27E23163000B0261 = {
 						CreatedOnToolsVersion = 13.1;
+						TestTargetID = DD33B78827E23122000B0261;
 					};
 				};
 			};
@@ -204,10 +216,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DD1F73E327E235AC00326FE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD33B78827E23122000B0261 /* Province */;
+			targetProxy = DD1F73E227E235AC00326FE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		DD33B79527E23124000B0261 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -261,6 +282,8 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -269,6 +292,7 @@
 		DD33B79627E23124000B0261 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -315,6 +339,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -382,6 +408,7 @@
 		DD33B7A227E23163000B0261 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -399,12 +426,14 @@
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Province.app/Province";
 			};
 			name = Debug;
 		};
 		DD33B7A327E23163000B0261 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -422,6 +451,7 @@
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Province.app/Province";
 			};
 			name = Release;
 		};
