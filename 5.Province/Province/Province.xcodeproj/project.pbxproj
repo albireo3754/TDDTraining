@@ -11,6 +11,8 @@
 		DD33B78F27E23122000B0261 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD33B78E27E23122000B0261 /* ContentView.swift */; };
 		DD33B79127E23124000B0261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD33B79027E23124000B0261 /* Assets.xcassets */; };
 		DD33B79427E23124000B0261 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD33B79327E23124000B0261 /* Preview Assets.xcassets */; };
+		DD33B7A127E23163000B0261 /* ProvinceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD33B7A027E23163000B0261 /* ProvinceTest.swift */; };
+		DD33B7A627E23190000B0261 /* Province.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD33B7A527E23190000B0261 /* Province.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,10 +21,20 @@
 		DD33B78E27E23122000B0261 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DD33B79027E23124000B0261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD33B79327E23124000B0261 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DD33B79E27E23163000B0261 /* ProvinceTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProvinceTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD33B7A027E23163000B0261 /* ProvinceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceTest.swift; sourceTree = "<group>"; };
+		DD33B7A527E23190000B0261 /* Province.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Province.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DD33B78627E23122000B0261 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD33B79B27E23163000B0261 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				DD33B78B27E23122000B0261 /* Province */,
+				DD33B79F27E23163000B0261 /* ProvinceTest */,
 				DD33B78A27E23122000B0261 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				DD33B78927E23122000B0261 /* Province.app */,
+				DD33B79E27E23163000B0261 /* ProvinceTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,6 +69,7 @@
 				DD33B78E27E23122000B0261 /* ContentView.swift */,
 				DD33B79027E23124000B0261 /* Assets.xcassets */,
 				DD33B79227E23124000B0261 /* Preview Content */,
+				DD33B7A527E23190000B0261 /* Province.swift */,
 			);
 			path = Province;
 			sourceTree = "<group>";
@@ -65,6 +80,14 @@
 				DD33B79327E23124000B0261 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DD33B79F27E23163000B0261 /* ProvinceTest */ = {
+			isa = PBXGroup;
+			children = (
+				DD33B7A027E23163000B0261 /* ProvinceTest.swift */,
+			);
+			path = ProvinceTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +110,23 @@
 			productReference = DD33B78927E23122000B0261 /* Province.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DD33B79D27E23163000B0261 /* ProvinceTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD33B7A427E23163000B0261 /* Build configuration list for PBXNativeTarget "ProvinceTest" */;
+			buildPhases = (
+				DD33B79A27E23163000B0261 /* Sources */,
+				DD33B79B27E23163000B0261 /* Frameworks */,
+				DD33B79C27E23163000B0261 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProvinceTest;
+			productName = ProvinceTest;
+			productReference = DD33B79E27E23163000B0261 /* ProvinceTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +138,9 @@
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					DD33B78827E23122000B0261 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					DD33B79D27E23163000B0261 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
@@ -116,6 +159,7 @@
 			projectRoot = "";
 			targets = (
 				DD33B78827E23122000B0261 /* Province */,
+				DD33B79D27E23163000B0261 /* ProvinceTest */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +174,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DD33B79C27E23163000B0261 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,8 +188,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD33B7A627E23190000B0261 /* Province.swift in Sources */,
 				DD33B78F27E23122000B0261 /* ContentView.swift in Sources */,
 				DD33B78D27E23122000B0261 /* ProvinceApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD33B79A27E23163000B0261 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD33B7A127E23163000B0261 /* ProvinceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +379,52 @@
 			};
 			name = Release;
 		};
+		DD33B7A227E23163000B0261 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6785P7H4GT;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Albireo3754.ProvinceTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DD33B7A327E23163000B0261 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6785P7H4GT;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Albireo3754.ProvinceTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +442,15 @@
 			buildConfigurations = (
 				DD33B79827E23124000B0261 /* Debug */,
 				DD33B79927E23124000B0261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD33B7A427E23163000B0261 /* Build configuration list for PBXNativeTarget "ProvinceTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD33B7A227E23163000B0261 /* Debug */,
+				DD33B7A327E23163000B0261 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
