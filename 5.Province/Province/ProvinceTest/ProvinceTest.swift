@@ -29,4 +29,23 @@ class ProvinceTest: XCTestCase {
 //        XCTAssertEqual(asia.profit, 292)
 //    }
     
+    
+    func testNoProducer() throws {
+        let noProducers = [Province.ProducerDto]()
+        let province = Province(name: "no producer", producers: [], demand: 30, price: 20)
+        XCTAssertEqual(province.shortfall, 30)
+        XCTAssertEqual(province.profit, 0)
+    }
+    
+    func testNoDemand() throws {
+        asia.demand = 0
+        XCTAssertEqual(asia.shortfall, -25)
+        XCTAssertEqual(asia.profit, 0)
+    }
+    
+    func testNoNegativeDemand() throws {
+        asia.demand = -1
+        XCTAssertEqual(asia.shortfall, -26)
+        XCTAssertEqual(asia.profit, -10)
+    }
 }

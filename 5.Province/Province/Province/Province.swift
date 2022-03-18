@@ -20,10 +20,10 @@ class Province {
         }
     }
     
-    internal init(name: String, producers: [ProducerDto], totalProduction: Int, demand: Int, price: Int) {
+    internal init(name: String, producers: [ProducerDto], demand: Int, price: Int) {
         self.name = name
         self.producers = []
-        self.totalProduction = totalProduction
+        self.totalProduction = 0
         self.demand = demand
         self.price = price
         producers.forEach {
@@ -34,7 +34,7 @@ class Province {
     let name: String
     var producers: [Producer]
     var totalProduction: Int
-    let demand: Int
+    var demand: Int
     let price: Int
     
     func addProducer(_ producer: Producer) {
@@ -95,5 +95,5 @@ class Producer {
 }
 
 func sampleProvinceData() -> Province {
-    Province(name: "Asia", producers: [Province.ProducerDto(name: "Byzantium", cost: 10, production:9), Province.ProducerDto(name: "Attalia", cost: 12, production: 10), Province.ProducerDto(name: "Sinope", cost: 10, production: 6)], totalProduction: 0, demand: 30, price: 20)
+    Province(name: "Asia", producers: [Province.ProducerDto(name: "Byzantium", cost: 10, production:9), Province.ProducerDto(name: "Attalia", cost: 12, production: 10), Province.ProducerDto(name: "Sinope", cost: 10, production: 6)], demand: 30, price: 20)
 }
