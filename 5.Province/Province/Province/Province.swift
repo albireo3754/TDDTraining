@@ -45,6 +45,32 @@ class Province {
     var shortfall: Int {
         demand - totalProduction
     }
+    
+    var profit: Int {
+        demandValue - demandCost
+    }
+    
+    var demandValue: Int {
+        satisfiedDemand * price
+    }
+    
+    var satisfiedDemand: Int {
+        min(demand, totalProduction)
+    }
+    
+    var demandCost: Int {
+        var remainingDemand = demand
+        var result = 0
+        producers.sorted {
+            $0.cost < $1.cost
+        }
+        .forEach {
+            let contribution = min(remainingDemand, $0.production)
+            remainingDemand -= contribution
+            result += $0.cost * contribution
+        }
+        return result
+    }
 }
 
 class Producer {
