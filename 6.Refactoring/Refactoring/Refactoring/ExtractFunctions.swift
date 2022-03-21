@@ -42,16 +42,20 @@ fileprivate func recordDueData(_ invoice: Invoice) {
 }
 
 func extractfunc(invoice: Invoice) -> (String, Int, Date) {
-    var outStanding = 0
-    
     printBanner()
     
-    for order in invoice.orders {
-        outStanding += order.amount
-    }
+    let outStanding = calcuateOutstanding(invoice)
     
     recordDueData(invoice)
     
     return (invoice.customer, outStanding, invoice.dueDate)
+}
+
+func calcuateOutstanding(_ invoice: Invoice) -> Int {
+    var outStanding = 0
+    for order in invoice.orders {
+        outStanding += order.amount
+    }
+    return outStanding
 }
 
