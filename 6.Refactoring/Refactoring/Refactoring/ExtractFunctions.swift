@@ -8,10 +8,11 @@
 import Foundation
 
 class Invoice {
-    internal init(orders: [Order]) {
+    internal init(customer: String, orders: [Order]) {
+        self.customer = customer
         self.orders = orders
     }
-    
+    let customer: String
     let orders: [Order]
     var dueDate: Date = Date()
 }
@@ -43,6 +44,6 @@ func extractfunc(invoice: Invoice) -> (String, Int, Date) {
     let today = Clock.today
     invoice.dueDate = today.addingTimeInterval(30 * 3600)
     
-    return ("dummy", 1, today)
+    return (invoice.customer, outStanding, invoice.dueDate)
 }
 

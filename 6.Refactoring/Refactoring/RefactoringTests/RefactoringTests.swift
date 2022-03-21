@@ -10,10 +10,10 @@ import XCTest
 
 class RefactoringTest: XCTestCase {
     func testExtractFunction() throws {
-        let detail = extractfunc(invoice: Invoice(orders: [Order(amount: 1)]))
+        let detail = extractfunc(invoice: Invoice(customer: "dummy", orders: [Order(amount: 1)]))
         XCTAssertEqual(detail.0, "dummy")
         XCTAssertEqual(detail.1, 1)
-        XCTAssertEqual(detail.2, Date(timeIntervalSince1970: 0))
+        XCTAssertEqual(detail.2, Clock.today.addingTimeInterval(3600 * 30))
     }
 }
 
