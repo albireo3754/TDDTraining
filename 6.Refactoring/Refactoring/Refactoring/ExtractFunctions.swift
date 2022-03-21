@@ -30,12 +30,16 @@ struct Clock {
     }
 }
 
-func extractfunc(invoice: Invoice) -> (String, Int, Date) {
-    var outStanding = 0
-    
+func printBanner() {
     print("*******************")
     print("*******고객채무********")
     print("*******************")
+}
+
+func extractfunc(invoice: Invoice) -> (String, Int, Date) {
+    var outStanding = 0
+    
+    printBanner()
     
     for order in invoice.orders {
         outStanding += order.amount
