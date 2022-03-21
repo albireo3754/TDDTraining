@@ -36,6 +36,11 @@ func printBanner() {
     print("*******************")
 }
 
+fileprivate func recordDueData(_ invoice: Invoice) {
+    let today = Clock.today
+    invoice.dueDate = today.addingTimeInterval(30 * 3600)
+}
+
 func extractfunc(invoice: Invoice) -> (String, Int, Date) {
     var outStanding = 0
     
@@ -45,8 +50,7 @@ func extractfunc(invoice: Invoice) -> (String, Int, Date) {
         outStanding += order.amount
     }
     
-    let today = Clock.today
-    invoice.dueDate = today.addingTimeInterval(30 * 3600)
+    recordDueData(invoice)
     
     return (invoice.customer, outStanding, invoice.dueDate)
 }
