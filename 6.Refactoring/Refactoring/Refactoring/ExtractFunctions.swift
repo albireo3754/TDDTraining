@@ -59,11 +59,7 @@ func calcuateOutstanding(_ invoice: Invoice) -> Int {
     return outStanding
 }
 
-func getRating(driver) {
-    return moreThanFiveLateDeliveries(driver) ? 2: 1
-}
-
-func moreThanFiveLateDeliveries(driver: Int) {
-    return driver > 5;
+func getRating(driver: Int) -> Int {
+    return driver > 5 ? 2: 1
 }
 
