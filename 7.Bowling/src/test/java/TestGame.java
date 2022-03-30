@@ -58,4 +58,13 @@ public class TestGame {
         assertThat(18).isEqualTo(g.scoreForFrame(2));
         assertThat(3).isEqualTo(g.getCurrentFrame());
     }
+
+    @Test
+    public void testPerfectGame() {
+        for (int i = 0; i < 12; i++) {
+            g.add(10);
+        }
+        assertThat(300).isEqualTo(g.score());
+        assertThat(11).isEqualTo(g.getCurrentFrame());
+    }
 }
