@@ -67,4 +67,27 @@ public class TestGame {
         assertThat(300).isEqualTo(g.score());
         assertThat(11).isEqualTo(g.getCurrentFrame());
     }
+
+    @Test
+    public void testEndOfArray() {
+        for (int i = 0; i < 9; i++) {
+            g.add(0);
+            g.add(0);
+        }
+        g.add(2);
+        g.add(8);
+        g.add(10);
+        assertThat(20).isEqualTo(g.score());
+    }
+
+    @Test
+    public void testTenthFrameSpare() {
+        for (int i = 0; i < 9; i++) {
+            g.add(10);
+        }
+        g.add(9);
+        g.add(1);
+        g.add(1);
+        assertThat(270).isEqualTo(g.score());
+    }
 }
