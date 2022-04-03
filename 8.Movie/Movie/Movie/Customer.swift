@@ -20,15 +20,12 @@ class Customer {
     }
     
     func statement() -> String {
-        var totalAmount = 0.0
-        var frequentRenterPoints = 0
         var result = "Rental Record for \(name)\n"
         for rental in rentals {
-            frequentRenterPoints += rental.getFrequentRenterPoints()
             result += "\t\(rental.movie.title)\t\(rental.getCharge())\n"
         }
         result += "Amount owed is \(getTotalCharge())\n"
-        result += "You earned \(frequentRenterPoints) frequent renter points"
+        result += "You earned \(getTotalFrequentRenterPoints()) frequent renter points"
         return result
     }
     
@@ -36,6 +33,14 @@ class Customer {
         var result = 0.0
         for rental in rentals {
             result += rental.getCharge()
+        }
+        return result
+    }
+    
+    private func getTotalFrequentRenterPoints() -> Int {
+        var result = 0
+        for rental in rentals {
+            result += rental.getFrequentRenterPoints()
         }
         return result
     }
