@@ -29,6 +29,16 @@ class Customer {
         return result
     }
     
+    func htmlStateMent() -> String {
+        var result = "Rental Record for \(name)\n"
+        for rental in rentals {
+            result += "\t\(rental.movie.title)\t\(rental.getCharge())\n"
+        }
+        result += "Amount owed is \(getTotalCharge())\n"
+        result += "You earned \(getTotalFrequentRenterPoints()) frequent renter points"
+        return result
+    }
+    
     private func getTotalCharge() -> Double {
         var result = 0.0
         for rental in rentals {
