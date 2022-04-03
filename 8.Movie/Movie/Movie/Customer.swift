@@ -24,15 +24,19 @@ class Customer {
         var frequentRenterPoints = 0
         var result = "Rental Record for \(name)\n"
         for rental in rentals {
-            frequentRenterPoints += 1
-            if rental.movie.priceCode == Movie.NEW_RELEASE && rental.daysRented > 1 {
-                frequentRenterPoints += 1
-            }
+            frequentRenterPoints += rental.getFrequentRenterPoints()
             result += "\t\(rental.movie.title)\t\(rental.getCharge())\n"
-            totalAmount += rental.getCharge()
         }
-        result += "Amount owed is \(totalAmount)\n"
+        result += "Amount owed is \(getTotalCharge())\n"
         result += "You earned \(frequentRenterPoints) frequent renter points"
+        return result
+    }
+    
+    private func getTotalCharge() -> Double {
+        var result = 0.0
+        for rental in rentals {
+            result += rental.getCharge()
+        }
         return result
     }
 }
