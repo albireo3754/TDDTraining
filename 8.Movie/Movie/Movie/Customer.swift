@@ -20,7 +20,7 @@ class Customer {
     }
     
     func statement() -> String {
-        let totalAmount = 0.0
+        var totalAmount = 0.0
         var frequentRenterPoints = 0
         var result = "Rental Record for \(name)\n"
         for rental in rentals {
@@ -45,7 +45,8 @@ class Customer {
             if rental.movie.priceCode == Movie.NEW_RELEASE && rental.daysRented > 1 {
                 frequentRenterPoints += 1
             }
-            result += "\t \(rental.movie.title) \t \(thisAmount)\n"
+            result += "\t\(rental.movie.title)\t\(thisAmount)\n"
+            totalAmount += thisAmount
         }
         result += "Amount owed is \(totalAmount)\n"
         result += "You earned \(frequentRenterPoints) frequent renter points"

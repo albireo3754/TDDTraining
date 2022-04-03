@@ -19,15 +19,13 @@ class MovieTests: XCTestCase {
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let customer = Customer(name: "dummy")
+        let titanic = Rental(movie: Movie(title: "titanic", priceCode: Movie.NEW_RELEASE), daysRented: 2)
+        let starWars = Rental(movie: Movie(title: "starWars", priceCode: Movie.CHILDRENS), daysRented: 3)
+        let ironman = Rental(movie: Movie(title: "ironman", priceCode: Movie.REGULAR), daysRented: 5)
+        customer.addRental(titanic)
+        customer.addRental(starWars)
+        customer.addRental(ironman)
+        XCTAssertEqual(customer.statement(), "Rental Record for dummy\n\ttitanic\t6.0\n\tstarWars\t1.5\n\tironman\t6.5\nAmount owed is 14.0\nYou earned 4 frequent renter points")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
