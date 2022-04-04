@@ -7,4 +7,10 @@
 
 import Foundation
 
-
+func printOwing(amount: Double) {
+    print("--------")
+    print("-Banner-")
+    print("--------")
+    
+    print("amount" + "\(amount)")
+}
