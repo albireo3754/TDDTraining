@@ -18,6 +18,7 @@
 		DDA1BBED27F9B74B00BC2B6E /* Rental.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA1BBEC27F9B74B00BC2B6E /* Rental.swift */; };
 		DDA1BBEF27F9BAEF00BC2B6E /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA1BBEE27F9BAEF00BC2B6E /* Customer.swift */; };
 		DDA1BBF127F9BB6400BC2B6E /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA1BBF027F9BB6400BC2B6E /* Main.swift */; };
+		DDA1BBF327FB36CB00BC2B6E /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA1BBF227FB36CB00BC2B6E /* Price.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		DDA1BBEC27F9B74B00BC2B6E /* Rental.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rental.swift; sourceTree = "<group>"; };
 		DDA1BBEE27F9BAEF00BC2B6E /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		DDA1BBF027F9BB6400BC2B6E /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		DDA1BBF227FB36CB00BC2B6E /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				DDA1BBD427F9B68E00BC2B6E /* LaunchScreen.storyboard */,
 				DDA1BBD727F9B68E00BC2B6E /* Info.plist */,
 				DDA1BBEA27F9B6DE00BC2B6E /* Movie.swift */,
+				DDA1BBF227FB36CB00BC2B6E /* Price.swift */,
 				DDA1BBF027F9BB6400BC2B6E /* Main.swift */,
 				DDA1BBEC27F9B74B00BC2B6E /* Rental.swift */,
 				DDA1BBEE27F9BAEF00BC2B6E /* Customer.swift */,
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDA1BBED27F9B74B00BC2B6E /* Rental.swift in Sources */,
+				DDA1BBF327FB36CB00BC2B6E /* Price.swift in Sources */,
 				DDA1BBCE27F9B68C00BC2B6E /* ViewController.swift in Sources */,
 				DDA1BBCA27F9B68C00BC2B6E /* AppDelegate.swift in Sources */,
 				DDA1BBEF27F9BAEF00BC2B6E /* Customer.swift in Sources */,

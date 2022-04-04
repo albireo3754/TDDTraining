@@ -13,39 +13,31 @@ public class Movie {
     static let NEW_RELEASE = 1
     
     let title: String
-    var priceCode: Int
+    var price: Price! = nil
     
     init(title: String, priceCode: Int) {
         self.title = title
-        self.priceCode = priceCode
+        self.setPriceCode(arg: priceCode)
     }
     
-    public func getCharge(daysRented: Int) -> Double {
-        var result = 0.0
-        switch priceCode {
+    func setPriceCode(arg: Int) {
+        switch arg {
         case Movie.REGULAR:
-            result += 2
-            if daysRented > 2 {
-                result += Double((daysRented - 2)) * 1.5
-            }
-        case Movie.NEW_RELEASE:
-            result += Double(daysRented * 3)
+            price = RegularPrice()
         case Movie.CHILDRENS:
-            result += 1.5
-            if daysRented > 3 {
-                result += Double((daysRented - 3)) * 1.5
-            }
+            price = ChildrensPrice()
+        case Movie.NEW_RELEASE:
+            price = NewReleasePrice()
         default:
             break
         }
-        return result
+    }
+    
+    func getCharge(daysRented: Int) -> Double {
+        return price.getCharge(daysRented: daysRented)
     }
     
     public func getFrequentRenterPoints(daysRented: Int) -> Int {
-        var frequentRenterPoints = 1
-        if priceCode == Movie.NEW_RELEASE && daysRented > 1 {
-            frequentRenterPoints += 1
-        }
-        return frequentRenterPoints
+        return price.getFrequentRenterPoints(daysRented: daysRented)
     }
 }
