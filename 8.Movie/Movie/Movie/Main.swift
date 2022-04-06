@@ -13,8 +13,12 @@ func printBanner() {
     print("--------")
 }
 
-func printOwing(amount: Double) {
-    printBanner()
-    
+func printAmount(_ amount: Double) {
     print("amount" + "\(amount)")
+}
+
+func printOwing() {
+    printBanner()
+    let amount = 1.0
+    printAmount(amount)
 }
