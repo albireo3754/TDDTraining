@@ -17,8 +17,20 @@ func printAmount(_ amount: Double) {
     print("amount" + "\(amount)")
 }
 
+func calculateAmount() -> Double {
+    var amount = 1.0
+    for i in 1...5 {
+        amount += Double(i)
+    }
+    return amount
+}
+
 func printOwing() {
     printBanner()
-    let amount = 1.0
+//    var amount = 1.0
+//    for i in 1...5 {
+//        amount += Double(i)
+//    }
+    var amount = calculateAmount()
     printAmount(amount)
 }
