@@ -35,7 +35,7 @@
 		DDA1BC0B27FF400000BC2B6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDA1BC0E27FF400000BC2B6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDA1BC1027FF400000BC2B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDA1BC1A27FF401600BC2B6E /* RepaceTempWithQueryTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepaceTempWithQueryTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDA1BC1A27FF401600BC2B6E /* ComposingMethodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComposingMethodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA1BC1C27FF401600BC2B6E /* RepaceTempWithQueryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepaceTempWithQueryTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA1BC0127FF3FFF00BC2B6E /* Refactoring */,
-				DDA1BC1B27FF401600BC2B6E /* RepaceTempWithQueryTest */,
+				DDA1BC1B27FF401600BC2B6E /* ComposingMethodTests */,
 				DDA1BC0027FF3FFF00BC2B6E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA1BBFF27FF3FFF00BC2B6E /* Refactoring.app */,
-				DDA1BC1A27FF401600BC2B6E /* RepaceTempWithQueryTest.xctest */,
+				DDA1BC1A27FF401600BC2B6E /* ComposingMethodTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,12 +89,12 @@
 			path = Refactoring;
 			sourceTree = "<group>";
 		};
-		DDA1BC1B27FF401600BC2B6E /* RepaceTempWithQueryTest */ = {
+		DDA1BC1B27FF401600BC2B6E /* ComposingMethodTests */ = {
 			isa = PBXGroup;
 			children = (
 				DDA1BC1C27FF401600BC2B6E /* RepaceTempWithQueryTest.swift */,
 			);
-			path = RepaceTempWithQueryTest;
+			path = ComposingMethodTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,9 +117,9 @@
 			productReference = DDA1BBFF27FF3FFF00BC2B6E /* Refactoring.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DDA1BC1927FF401600BC2B6E /* RepaceTempWithQueryTest */ = {
+		DDA1BC1927FF401600BC2B6E /* ComposingMethodTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDA1BC1E27FF401600BC2B6E /* Build configuration list for PBXNativeTarget "RepaceTempWithQueryTest" */;
+			buildConfigurationList = DDA1BC1E27FF401600BC2B6E /* Build configuration list for PBXNativeTarget "ComposingMethodTests" */;
 			buildPhases = (
 				DDA1BC1627FF401600BC2B6E /* Sources */,
 				DDA1BC1727FF401600BC2B6E /* Frameworks */,
@@ -130,9 +130,9 @@
 			dependencies = (
 				DDA1BC2227FF401900BC2B6E /* PBXTargetDependency */,
 			);
-			name = RepaceTempWithQueryTest;
+			name = ComposingMethodTests;
 			productName = RepaceTempWithQueryTest;
-			productReference = DDA1BC1A27FF401600BC2B6E /* RepaceTempWithQueryTest.xctest */;
+			productReference = DDA1BC1A27FF401600BC2B6E /* ComposingMethodTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -167,7 +167,7 @@
 			projectRoot = "";
 			targets = (
 				DDA1BBFE27FF3FFF00BC2B6E /* Refactoring */,
-				DDA1BC1927FF401600BC2B6E /* RepaceTempWithQueryTest */,
+				DDA1BC1927FF401600BC2B6E /* ComposingMethodTests */,
 			);
 		};
 /* End PBXProject section */
@@ -292,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -347,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -428,7 +428,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Albireo3754.RepaceTempWithQueryTest;
+				PRODUCT_BUNDLE_IDENTIFIER = Albireo3754.ComposingMethodTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -451,7 +451,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Albireo3754.RepaceTempWithQueryTest;
+				PRODUCT_BUNDLE_IDENTIFIER = Albireo3754.ComposingMethodTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -480,7 +480,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDA1BC1E27FF401600BC2B6E /* Build configuration list for PBXNativeTarget "RepaceTempWithQueryTest" */ = {
+		DDA1BC1E27FF401600BC2B6E /* Build configuration list for PBXNativeTarget "ComposingMethodTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DDA1BC1F27FF401600BC2B6E /* Debug */,

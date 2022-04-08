@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DDA1BC1927FF401600BC2B6E"
-               BuildableName = "RepaceTempWithQueryTest.xctest"
-               BlueprintName = "RepaceTempWithQueryTest"
+               BuildableName = "ComposingMethodTests.xctest"
+               BlueprintName = "ComposingMethodTests"
                ReferencedContainer = "container:Refactoring.xcodeproj">
             </BuildableReference>
          </TestableReference>
