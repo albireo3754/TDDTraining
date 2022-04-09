@@ -15,14 +15,16 @@ class STV {
     
     func getDistanceTravelled(time: Int) -> Double {
         var result: Double
-        var acc = primaryForce / mass
+        // 1. 임시변수의 이름을 변경하고 final하게 변경한다.
+        let primaryAcc = primaryForce / mass
         let primaryTime = min(Double(time), delay)
-        result = 0.5 * acc * primaryTime * primaryTime
+        result = 0.5 * primaryAcc * primaryTime * primaryTime
         let secondaryTime = Double(time) - delay
         if secondaryTime > 0 {
-            let primaryVel = acc * delay
-            acc = primaryForce * secondaryForce / mass
-            result += primaryVel * secondaryTime + 0.5 * acc * secondaryTime * secondaryTime
+            let primaryVel = primaryAcc * delay
+            // 2. 여기도 임시 변수의 이름을 바꿔서 명확도를 증가시켰다.
+            let secondaryAcc = primaryForce * secondaryForce / mass
+            result += primaryVel * secondaryTime + 0.5 * secondaryAcc * secondaryTime * secondaryTime
         }
         return result
     }
