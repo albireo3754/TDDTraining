@@ -16,9 +16,27 @@ class IntroduceExplainingVariable {
         self.itemPrice = itemPrice
     }
     
+    // 3. Introduce Explaining Variable로 분리한 변수를 ExtractMethod로 다시 변환함
+    // 물론 여기서 이해가 더 잘되는 로직으로 변경되는 경우가 생긴가면 ReplaceTemp with Query를 적용한다.
+    fileprivate func getBasePrice() -> Double {
+        return Double(quantity * itemPrice)
+    }
+    
+    fileprivate func getQuantityDiscount() -> Double {
+        return Double(max(0, quantity - 500) * itemPrice) * 0.05
+    }
+    
+    fileprivate func getShipping() -> Double {
+        return min(getBasePrice() * 0.1, 100.0)
+    }
+    
     func price() -> Double {
-        let basePrice: Double = Double(quantity * itemPrice)
-        return basePrice - Double(max(0, quantity - 500) * itemPrice) * 0.05 + min(basePrice * 0.1, 100.0)
+        let basePrice: Double = getBasePrice()
+        // 1. quantityDiscount를 도입한다.
+        let quantityDiscount = getQuantityDiscount()
+        // 2. shipping을 도입한다.
+        let shipping = getShipping()
+        return basePrice - quantityDiscount + shipping
     }
 }
 
