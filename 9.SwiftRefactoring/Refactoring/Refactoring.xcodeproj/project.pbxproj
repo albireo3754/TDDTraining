@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD81BF242800AD6F00ACC54E /* IntroduceExplainingVariableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81BF232800AD6F00ACC54E /* IntroduceExplainingVariableTest.swift */; };
 		DDA1BC0327FF3FFF00BC2B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA1BC0227FF3FFF00BC2B6E /* AppDelegate.swift */; };
 		DDA1BC0527FF3FFF00BC2B6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA1BC0427FF3FFF00BC2B6E /* SceneDelegate.swift */; };
 		DDA1BC0727FF3FFF00BC2B6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA1BC0627FF3FFF00BC2B6E /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD81BF232800AD6F00ACC54E /* IntroduceExplainingVariableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceExplainingVariableTest.swift; sourceTree = "<group>"; };
 		DDA1BBFF27FF3FFF00BC2B6E /* Refactoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Refactoring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA1BC0227FF3FFF00BC2B6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDA1BC0427FF3FFF00BC2B6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		DDA1BC1B27FF401600BC2B6E /* ComposingMethodTests */ = {
 			isa = PBXGroup;
 			children = (
+				DD81BF232800AD6F00ACC54E /* IntroduceExplainingVariableTest.swift */,
 				DDA1BC1C27FF401600BC2B6E /* RepaceTempWithQueryTest.swift */,
 			);
 			path = ComposingMethodTests;
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD81BF242800AD6F00ACC54E /* IntroduceExplainingVariableTest.swift in Sources */,
 				DDA1BC1D27FF401600BC2B6E /* RepaceTempWithQueryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
