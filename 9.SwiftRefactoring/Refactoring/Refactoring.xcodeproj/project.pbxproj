@@ -16,6 +16,7 @@
 		DDA1BC0F27FF400000BC2B6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA1BC0D27FF400000BC2B6E /* LaunchScreen.storyboard */; };
 		DDA1BC1D27FF401600BC2B6E /* RepaceTempWithQueryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA1BC1C27FF401600BC2B6E /* RepaceTempWithQueryTest.swift */; };
 		DDEC42D52801743B00ABF9F4 /* SplitTemporaryVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC42D42801743B00ABF9F4 /* SplitTemporaryVariable.swift */; };
+		DDEC42D728017A5900ABF9F4 /* ReplaceMethodwithMethodObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC42D628017A5900ABF9F4 /* ReplaceMethodwithMethodObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		DDA1BC1A27FF401600BC2B6E /* ComposingMethodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComposingMethodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA1BC1C27FF401600BC2B6E /* RepaceTempWithQueryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepaceTempWithQueryTest.swift; sourceTree = "<group>"; };
 		DDEC42D42801743B00ABF9F4 /* SplitTemporaryVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTemporaryVariable.swift; sourceTree = "<group>"; };
+		DDEC42D628017A5900ABF9F4 /* ReplaceMethodwithMethodObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMethodwithMethodObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		DDA1BC1B27FF401600BC2B6E /* ComposingMethodTests */ = {
 			isa = PBXGroup;
 			children = (
+				DDEC42D628017A5900ABF9F4 /* ReplaceMethodwithMethodObject.swift */,
 				DDEC42D42801743B00ABF9F4 /* SplitTemporaryVariable.swift */,
 				DD81BF232800AD6F00ACC54E /* IntroduceExplainingVariableTest.swift */,
 				DDA1BC1C27FF401600BC2B6E /* RepaceTempWithQueryTest.swift */,
@@ -216,6 +219,7 @@
 				DDEC42D52801743B00ABF9F4 /* SplitTemporaryVariable.swift in Sources */,
 				DD81BF242800AD6F00ACC54E /* IntroduceExplainingVariableTest.swift in Sources */,
 				DDA1BC1D27FF401600BC2B6E /* RepaceTempWithQueryTest.swift in Sources */,
+				DDEC42D728017A5900ABF9F4 /* ReplaceMethodwithMethodObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
