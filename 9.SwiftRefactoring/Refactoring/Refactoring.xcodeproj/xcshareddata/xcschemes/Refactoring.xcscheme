@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Refactoring.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DDEC42FB2803041C00ABF9F4"
+               BuildableName = "MovingFeaturesBetweenObjectTests.xctest"
+               BlueprintName = "MovingFeaturesBetweenObjectTests"
+               ReferencedContainer = "container:Refactoring.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -35,6 +49,16 @@
                BlueprintIdentifier = "DDA1BC1927FF401600BC2B6E"
                BuildableName = "ComposingMethodTests.xctest"
                BlueprintName = "ComposingMethodTests"
+               ReferencedContainer = "container:Refactoring.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DDEC42FB2803041C00ABF9F4"
+               BuildableName = "MovingFeaturesBetweenObjectTests.xctest"
+               BlueprintName = "MovingFeaturesBetweenObjectTests"
                ReferencedContainer = "container:Refactoring.xcodeproj">
             </BuildableReference>
          </TestableReference>
