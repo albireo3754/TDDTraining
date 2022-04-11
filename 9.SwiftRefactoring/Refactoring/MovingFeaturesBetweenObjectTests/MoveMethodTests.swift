@@ -7,7 +7,7 @@
 
 import XCTest
 
-enum AccountType {
+fileprivate enum AccountType {
     case premium
     case normal
     
@@ -34,7 +34,7 @@ enum AccountType {
     }
 }
 
-class Account {
+fileprivate class Account {
     internal init(type: AccountType, daysOverdrawn: Int) {
         self.type = type
         self.daysOverdrawn = daysOverdrawn

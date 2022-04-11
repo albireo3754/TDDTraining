@@ -8,9 +8,9 @@
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
@@ -38,6 +38,16 @@
                ReferencedContainer = "container:Refactoring.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DDEC42FB2803041C00ABF9F4"
+               BuildableName = "MovingFeaturesBetweenObjectTests.xctest"
+               BlueprintName = "MovingFeaturesBetweenObjectTests"
+               ReferencedContainer = "container:Refactoring.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -57,15 +67,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DDEC42FB2803041C00ABF9F4"
-            BuildableName = "MovingFeaturesBetweenObjectTests.xctest"
-            BlueprintName = "MovingFeaturesBetweenObjectTests"
-            ReferencedContainer = "container:Refactoring.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

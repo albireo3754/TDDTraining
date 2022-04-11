@@ -18,6 +18,7 @@
 		DDEC42D52801743B00ABF9F4 /* SplitTemporaryVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC42D42801743B00ABF9F4 /* SplitTemporaryVariable.swift */; };
 		DDEC42D728017A5900ABF9F4 /* ReplaceMethodwithMethodObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC42D628017A5900ABF9F4 /* ReplaceMethodwithMethodObject.swift */; };
 		DDEC42FF2803041C00ABF9F4 /* MoveMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC42FE2803041C00ABF9F4 /* MoveMethodTests.swift */; };
+		DDEC430F280473DD00ABF9F4 /* MoveFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC430E280473DD00ABF9F4 /* MoveFieldTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		DDEC42D628017A5900ABF9F4 /* ReplaceMethodwithMethodObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMethodwithMethodObject.swift; sourceTree = "<group>"; };
 		DDEC42FC2803041C00ABF9F4 /* MovingFeaturesBetweenObjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovingFeaturesBetweenObjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDEC42FE2803041C00ABF9F4 /* MoveMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveMethodTests.swift; sourceTree = "<group>"; };
+		DDEC430E280473DD00ABF9F4 /* MoveFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveFieldTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		DDEC42FD2803041C00ABF9F4 /* MovingFeaturesBetweenObjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				DDEC430E280473DD00ABF9F4 /* MoveFieldTests.swift */,
 				DDEC42FE2803041C00ABF9F4 /* MoveMethodTests.swift */,
 			);
 			path = MovingFeaturesBetweenObjectTests;
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDEC42FF2803041C00ABF9F4 /* MoveMethodTests.swift in Sources */,
+				DDEC430F280473DD00ABF9F4 /* MoveFieldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
