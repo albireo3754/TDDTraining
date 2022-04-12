@@ -9,30 +9,29 @@ import XCTest
 
 class Person {
     let name: String
-    let officeAreaCode: String
-    let officeNumber: String
-    let telephoneNumber = TelephoneNumber()
+    let telephoneNumber = TelephoneNumber(officeAreaCode: "82" , officeNumber: "01012345678")
     
-    init(name: String, officeAreaCode: String, officeNumber: String) {
+    init(name: String) {
         self.name = name
-        self.officeAreaCode = officeAreaCode
-        self.officeNumber = officeNumber
     }
     
     func getTelephoneNumber() -> String {
-        return "(\(officeAreaCode))\(officeNumber)"
+        return "(\(telephoneNumber.officeAreaCode))\(telephoneNumber.officeNumber)"
     }
     
 }
 
-class TelephoneNumber {
-    
+struct TelephoneNumber {
+    // 1. MoveField
+    let officeAreaCode: String
+    // 2. MoveField
+    let officeNumber: String
 }
 
 class ExtractClassTests: XCTestCase {
     
     func test_extractClass() {
-        let person = Person(name: "dummy", officeAreaCode: "82", officeNumber: "01012345678")
+        let person = Person(name: "dummy")
         XCTAssertEqual(person.getTelephoneNumber(), "(82)01012345678")
     }
 }
