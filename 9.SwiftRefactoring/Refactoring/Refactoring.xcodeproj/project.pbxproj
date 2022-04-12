@@ -15,6 +15,7 @@
 		DDA1BC0C27FF400000BC2B6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA1BC0B27FF400000BC2B6E /* Assets.xcassets */; };
 		DDA1BC0F27FF400000BC2B6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA1BC0D27FF400000BC2B6E /* LaunchScreen.storyboard */; };
 		DDA1BC1D27FF401600BC2B6E /* RepaceTempWithQueryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA1BC1C27FF401600BC2B6E /* RepaceTempWithQueryTest.swift */; };
+		DDAF2FB22805A25F009A4DFD /* ExtractClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF2FB12805A25F009A4DFD /* ExtractClassTests.swift */; };
 		DDEC42D52801743B00ABF9F4 /* SplitTemporaryVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC42D42801743B00ABF9F4 /* SplitTemporaryVariable.swift */; };
 		DDEC42D728017A5900ABF9F4 /* ReplaceMethodwithMethodObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC42D628017A5900ABF9F4 /* ReplaceMethodwithMethodObject.swift */; };
 		DDEC42FF2803041C00ABF9F4 /* MoveMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC42FE2803041C00ABF9F4 /* MoveMethodTests.swift */; };
@@ -43,6 +44,7 @@
 		DDA1BC1027FF400000BC2B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDA1BC1A27FF401600BC2B6E /* ComposingMethodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComposingMethodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA1BC1C27FF401600BC2B6E /* RepaceTempWithQueryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepaceTempWithQueryTest.swift; sourceTree = "<group>"; };
+		DDAF2FB12805A25F009A4DFD /* ExtractClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractClassTests.swift; sourceTree = "<group>"; };
 		DDEC42D42801743B00ABF9F4 /* SplitTemporaryVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTemporaryVariable.swift; sourceTree = "<group>"; };
 		DDEC42D628017A5900ABF9F4 /* ReplaceMethodwithMethodObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMethodwithMethodObject.swift; sourceTree = "<group>"; };
 		DDEC42FC2803041C00ABF9F4 /* MovingFeaturesBetweenObjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovingFeaturesBetweenObjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 		DDEC42FD2803041C00ABF9F4 /* MovingFeaturesBetweenObjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				DDAF2FB12805A25F009A4DFD /* ExtractClassTests.swift */,
 				DDEC430E280473DD00ABF9F4 /* MoveFieldTests.swift */,
 				DDEC42FE2803041C00ABF9F4 /* MoveMethodTests.swift */,
 			);
@@ -280,6 +283,7 @@
 			files = (
 				DDEC42FF2803041C00ABF9F4 /* MoveMethodTests.swift in Sources */,
 				DDEC430F280473DD00ABF9F4 /* MoveFieldTests.swift in Sources */,
+				DDAF2FB22805A25F009A4DFD /* ExtractClassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
