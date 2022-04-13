@@ -7,7 +7,7 @@
 
 import XCTest
 
-class Person {
+fileprivate class Person {
     let name: String
     let telephoneNumber = TelephoneNumber(officeAreaCode: "82" , officeNumber: "01012345678")
     
