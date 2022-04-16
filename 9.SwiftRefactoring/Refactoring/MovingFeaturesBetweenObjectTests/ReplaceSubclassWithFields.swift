@@ -7,41 +7,29 @@
 
 import XCTest
 
-fileprivate protocol Person {
-    func isMale() -> Bool
-    func getCode() -> Character
+fileprivate struct Person {
+    private let code: Character
+    
+    init(code: Character) {
+        self.code = code
+    }
+    
+    func isMale() -> Bool {
+        return code == "M"
+    }
+    func getCode() -> Character {
+        return code
+    }
 }
 
 fileprivate class PersonFactory {
     fileprivate static func createMale() -> Person {
-        return Male()
+        return Person(code: "M")
     }
     
     fileprivate static func createFemal() -> Person {
-        return Female()
+        return Person(code: "F")
     }
-}
-
-fileprivate struct Male: Person {
-    func isMale() -> Bool {
-        true
-    }
-    
-    func getCode() -> Character {
-        "M"
-    }
-}
-
-fileprivate struct Female: Person {
-    func isMale() -> Bool {
-        false
-    }
-    
-    func getCode() -> Character {
-        "F"
-    }
-    
-    
 }
 
 class ReplaceSubclassWithFields: XCTestCase {
